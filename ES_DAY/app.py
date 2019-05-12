@@ -4,6 +4,8 @@ import methods
 methods.welcomeScreen()
 p = True
 while p:
+    print('\n')
+    print('\n')
     matricula = input('MATRICULA: ')
     if(len(matricula) < 8):
         print("MATRICULA INVÁLIDA! TENTE NOVAMENTE")
@@ -14,7 +16,7 @@ while p:
     print("--------------------------------------------------------------------------------------")
     print('MATRICULA DO ALUNO: ',matricula)
     print("\n")
-    check = input('CONFIRMAR MATRICULA: \n[ENTER]Confirmar  [t/T]Tentar novamente [f/F]Concluir: ')
+    check = input('CONFIRMAR MATRICULA: \n[ENTER]Confirmar  [t/T]Tentar novamente [f/F]Confirmar e Concluir: ')
     print("--------------------------------------------------------------------------------------")
     if(check == 'ENTER' or check == ""):
         print('MATRICULA CONFIRMADA!')
@@ -22,6 +24,7 @@ while p:
     elif(check == 't' or check == 'T'):
         continue
     elif(check == 'f' or check == 'F'):
+        methods.writeOnFile(matricula)
         print('CONFIRMAÇÃO COM ES-DAY CONCLUIDO!')
         p = False
     else:
