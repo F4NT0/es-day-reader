@@ -1,6 +1,7 @@
 def writeOnFile(matricula):
     file = open("matriculas.csv","a+")
-    matricula = f"{matricula}\n"
+    # matricula = f"{matricula}\n"
+    matricula = "%s \n" %(matricula)
     file.write(matricula)
     file.close()
     

@@ -19,7 +19,10 @@ while p:
     check = input('CONFIRMAR MATRICULA: \n[ENTER]Confirmar  [t/T]Tentar novamente [f/F]Confirmar e Concluir: ')
     print("--------------------------------------------------------------------------------------")
     if(check == 'ENTER' or check == ""):
+        print("\n")
+        print("--------------------------------------------------------------------------------------")
         print('MATRICULA CONFIRMADA!')
+        print("--------------------------------------------------------------------------------------")
         methods.writeOnFile(matricula)
     elif(check == 't' or check == 'T'):
         continue
