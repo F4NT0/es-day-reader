@@ -7,7 +7,7 @@ while p:
     print('\n')
     print('\n')
     matricula = input('MATRICULA: ')
-    if(len(matricula) < 8):
+    if(len(matricula) < 8 or (not matricula.isdigit())):
         print("MATRICULA INVÁLIDA! TENTE NOVAMENTE")
         continue
     else:
